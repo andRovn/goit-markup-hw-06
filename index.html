@@ -23,6 +23,8 @@
       }
       img {
         display: block;
+        max-width: 100%;
+        height: auto;
       }
     </style>
   </head>
@@ -46,14 +48,23 @@
         </nav>
         <address class="add">
           <ul class="ul-add list">
-            <li>
+            <li class="address-line">
               <a class="add-list link" href="mailto:info@devstudio.com">info@devstudio.com</a>
             </li>
-            <li>
+            <li class="address-line">
               <a class="add-list link" href="tel:+110001111111">+11 (000) 111-11-11</a>
             </li>
           </ul>
         </address>
+        <button
+          class="header-menu-btn menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="hamburger" width="28" height="28">
+            <use href="./images/icons.svg#icon-hamburger"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -151,7 +162,14 @@
           <h2 class="title-team">Our Team</h2>
           <ul class="list ul-team">
             <li class="list-four">
-              <img class="img-team" src="./images/team1.jpg" alt="Mark Guerrero" width="264" />
+              <img
+                class="img-team"
+                scrset="./images/team1.jpg 1x,
+                 ./images/team1@2x.jpg 2x"
+                src="./images/team1.jpg"
+                alt="Mark Guerrero"
+                width="264"
+              />
               <div class="card-team">
                 <h3 class="team-names">Mark Guerrero</h3>
                 <p class="team-jobs">Product Designer</p>
@@ -188,7 +206,13 @@
               </div>
             </li>
             <li class="list-four">
-              <img class="img-team" src="./images/team2.jpg" alt="Tom Ford" width="264" />
+              <img
+                class="img-team"
+                scrset="./images/team2.jpg 1x, ./images/team2@2x.jpg 2x"
+                src="./images/team2.jpg"
+                alt="Tom Ford"
+                width="264"
+              />
               <div class="card-team">
                 <h3 class="team-names">Tom Ford</h3>
                 <p class="team-jobs">Frontend Developer</p>
@@ -226,7 +250,13 @@
               </div>
             </li>
             <li class="list-four">
-              <img class="img-team" src="./images/team3.jpg" alt="Camila Garcia" width="264" />
+              <img
+                class="img-team"
+                scrset="./images/team3.jpg 1x, ./images/team3@2x.jpg 2x"
+                src="./images/team3.jpg"
+                alt="Camila Garcia"
+                width="264"
+              />
               <div class="card-team">
                 <h3 class="team-names">Camila Garcia</h3>
                 <p class="team-jobs">Marketing</p>
@@ -264,7 +294,13 @@
               </div>
             </li>
             <li class="list-four">
-              <img class="img-team" src="./images/team4.jpg" alt="Daniel Wilson" width="264" />
+              <img
+                class="img-team"
+                scrset="./images/team4.jpg 1x, ./images/team4@2x.jpg 2x"
+                src="./images/team4.jpg"
+                alt="Daniel Wilson"
+                width="264"
+              />
               <div class="card-team">
                 <h3 class="team-names">Daniel Wilson</h3>
                 <p class="team-jobs">UI Designer</p>
@@ -498,6 +534,74 @@
         </form>
       </div>
     </div>
+
+    <div class="menu-container js-menu-container" id="menu-container">
+      <button class="menu-toggle js-close-menu" type="button">
+        <svg class="menu-toggle-icon" width="8" height="8">
+          <use href="./images/icons.svg#icon-close-cross"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu list">
+        <li class="mobile-menu-item"
+          ><a href="" class="mobile-menu-link current link">Studio</a></li
+        >
+        <li class="mobile-menu-item"><a href="" class="mobile-menu-link link">Portfolio</a></li>
+        <li class="mobile-menu-item"><a href="" class="mobile-menu-link link">Contacts</a></li>
+      </ul>
+
+      <ul class="mobile-contacts list">
+        <li class="mobile-contacts-item"
+          ><a href="tel:+110001111111" class="mobile-contacts-link accent link"
+            >+11 (000) 111-11-11</a
+          ></li
+        >
+        <li class="mobile-contacts-item"
+          ><a href="mailto:info@devstudio.com" class="mobile-contacts-link link"
+            >info@devstudio.com</a
+          ></li
+        >
+      </ul>
+
+      <ul class="mobile-socials list">
+        <li class="mobile-socials-item"
+          ><a class="mobile-socials-link" href="">
+            <svg class="mobile-socials-icon" width="24" height="24">
+              <use class="foot-social-use" href="./images/icons.svg#icon-foot-1"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="mobile-socials-item"
+          ><a class="mobile-socials-link" href="">
+            <svg class="mobile-socials-icon" width="24" height="24">
+              <use class="foot-social-use" href="./images/icons.svg#icon-foot-2"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="mobile-socials-item"
+          ><a class="mobile-socials-link" href="">
+            <svg class="mobile-socials-icon" width="24" height="24">
+              <use class="foot-social-use" href="./images/icons.svg#icon-foot-3"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="mobile-socials-item"
+          ><a class="mobile-socials-link" href="">
+            <svg class="mobile-socials-icon" width="24" height="24">
+              <use class="foot-social-use" href="./images/icons.svg#icon-foot-4"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
