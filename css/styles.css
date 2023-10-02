@@ -791,7 +791,7 @@ button {
 
 @media (min-width: 768px) {
   .foot-socials-div {
-    margin: 0 auto;
+    margin-left: 24px;
   }
 }
 
